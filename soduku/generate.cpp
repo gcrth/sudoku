@@ -1,11 +1,12 @@
+#include "pch.h"
 #include <iostream>
 #include <string.h>
 #include <algorithm>
+using namespace std;
 #include "IO.h"
 #include "generate.h"
-using namespace std;
 
-generator::generator(int numToGen_, OutFile writeFile_, char firstElement = 3) :writeFile(writeFile_)
+generator::generator(int numToGen_, OutFile &writeFile_, char firstElement ) :writeFile(writeFile_)
 {
 	numToGen = numToGen_;
 	theFirstLine[0] = firstElement;
@@ -16,13 +17,13 @@ generator::generator(int numToGen_, OutFile writeFile_, char firstElement = 3) :
 		else lineBuf[2 * i + 1] = '\0';
 	}
 
-	this->run();
+	run();
 }
 
 bool generator::run()
 {
 	int numOfRow;
-	numOfRow = numOfRow / 144;
+	numOfRow = numToGen / 144;
 	for (int i = 0; i < numOfRow; i++)
 	{
 		for (int j = 0; j < 144; j++)
@@ -51,9 +52,10 @@ bool generator::run()
 		if (i == numOfRow - 1)output(false);
 		else output(true);
 	}
+	return true;
 }
 
-bool generator::output(bool withExtralEndl = true)
+bool generator::output(bool withExtralEndl )
 {
 	for (int i = 0; i < 9; i++)
 	{

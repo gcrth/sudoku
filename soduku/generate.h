@@ -1,4 +1,6 @@
 #pragma once
+#include "IO.h"
+
 class generator
 {
 private:
@@ -179,7 +181,7 @@ private:
 	char tableBuf[9][9];
 	char lineBuf[18];
 public:
-	generator(int numToGen_, OutFile writeFile_, char firstElement = 3) ;
+	generator(int numToGen_, OutFile &writeFile_, char firstElement = 3) ;
 	bool run();
 private:
 	bool output(bool withExtralEndl = true);

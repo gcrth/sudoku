@@ -1,3 +1,4 @@
+#include "pch.h"
 #include <iostream>
 #include <string.h>
 #include "IO.h"
@@ -25,7 +26,7 @@ bool InFile::open()
 	return (fp != NULL);
 }
 
-char *InFile::gets(char *des, int n = 17)
+char *InFile::gets(char *des, int n)
 {
 	return fgets(des, n, fp);
 }
@@ -58,7 +59,7 @@ bool OutFile::open()
 	return (fp != NULL);
 }
 
-bool OutFile::puts(const char *sou)
+int OutFile::puts(const char *sou)
 {
 	return fputs(sou, fp);
 
