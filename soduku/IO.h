@@ -23,6 +23,6 @@ public:
 	OutFile(const char desroute[]);
 	bool bind(const char desroute[]);
 	bool open();
-	bool puts(char *sou);
+	bool puts(const char *sou);
 	~OutFile(void);
 };

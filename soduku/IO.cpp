@@ -58,7 +58,7 @@ bool OutFile::open()
 	return (fp != NULL);
 }
 
-bool OutFile::puts(char *sou)
+bool OutFile::puts(const char *sou)
 {
 	return fputs(sou, fp);
 
