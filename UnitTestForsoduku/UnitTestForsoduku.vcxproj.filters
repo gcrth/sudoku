@@ -15,36 +15,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pch.h">
+    <ClInclude Include="stdafx.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="generate.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="solve.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="IO.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="soduku.h">
+    <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pch.cpp">
+    <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="soduku.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="solve.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="generate.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="IO.cpp">
+    <ClCompile Include="unittest1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -33,7 +33,7 @@ char *InFile::gets(char *des, int n)
 
 InFile::~InFile(void)
 {
-	fclose(fp);
+	if (fp != NULL)fclose(fp);
 }
 
 OutFile::OutFile(void) {}
@@ -67,5 +67,5 @@ int OutFile::puts(const char *sou)
 
 OutFile::~OutFile(void)
 {
-	fclose(fp);
+	if (fp != NULL)fclose(fp);
 }

@@ -9,7 +9,7 @@ public:
 	InFile(const char desroute[]);
 	bool bind(const char desroute[]);
 	bool open();
-	char *gets(char *des, int n = 17);
+	char *gets(char *des, int n = 18);
 	~InFile(void);
 };
 
