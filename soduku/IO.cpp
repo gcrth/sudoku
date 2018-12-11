@@ -31,6 +31,12 @@ char *InFile::gets(char *des, int n)
 	return fgets(des, n, fp);
 }
 
+int InFile::close()
+{
+	if (fp != NULL)return fclose(fp);
+	else return 0;
+}
+
 InFile::~InFile(void)
 {
 	if (fp != NULL)fclose(fp);
@@ -63,6 +69,12 @@ int OutFile::puts(const char *sou)
 {
 	return fputs(sou, fp);
 
+}
+
+int OutFile::close()
+{
+	if (fp != NULL)return fclose(fp);
+	else return 0;
 }
 
 OutFile::~OutFile(void)

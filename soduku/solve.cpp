@@ -9,6 +9,7 @@ solver::solver(InFile &readFile_, OutFile &writeFile_) :readFile(readFile_), wri
 {
 	run();
 }
+
 bool solver::run()
 {
 	bool withEndl;
@@ -19,13 +20,14 @@ bool solver::run()
 	}
 	return true;
 }
-bool solver::testWholeTable(char table[9][9])
+
+bool solver::testWholeTable()
 {
 	char list[10]; bool flag = true;
 	for (int i = 0; i < 81; i++)
 	{
 		searchAvalibleNumber(i / 9, i % 9, list);
-		if (list[table[i / 9][i % 9]] != 1)
+		if (list[tableBuf[i / 9][i % 9]] != 1)
 		{
 			flag = false;
 			break;
@@ -59,6 +61,7 @@ bool solver::input(bool &withEndl)
 	}
 	return true;
 }
+
 bool solver::test(char i)
 {
 	if (i == 81)return true;
@@ -78,6 +81,7 @@ bool solver::test(char i)
 	}
 	return false;
 }
+
 void solver::searchAvalibleNumber(char x, char y, char list[])
 {
 	for (int i = 0; i < 10; i++)
@@ -107,6 +111,7 @@ void solver::searchAvalibleNumber(char x, char y, char list[])
 		list[i] = list[i] == 1 ? 1 : 0;
 	}
 }
+
 bool solver::output(bool withExtralEndl )
 {
 	for (int i = 0; i < 9; i++)

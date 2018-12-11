@@ -10,6 +10,7 @@ public:
 	bool bind(const char desroute[]);
 	bool open();
 	char *gets(char *des, int n = 18);
+	int close();
 	~InFile(void);
 };
 
@@ -24,5 +25,6 @@ public:
 	bool bind(const char desroute[]);
 	bool open();
 	int puts(const char *sou);
+	int close();
 	~OutFile(void);
 };

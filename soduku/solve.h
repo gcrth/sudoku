@@ -15,7 +15,7 @@ private:
 public:
 	solver(InFile &readFile_, OutFile &writeFile_);
 	bool run();
-	bool testWholeTable(char table[9][9]);
+	bool testWholeTable();
 private:
 	bool input(bool &withEndl);
 	bool test(char i);
