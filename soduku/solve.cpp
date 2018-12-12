@@ -43,6 +43,7 @@ bool solver::input(bool &withEndl)
 	{
 		tableBuf[0][j] = inBuf[2 * j] - '0';
 	}
+	if (readFile.gets(inBuf, 18) == NULL)throw runtime_error("读入文件失败");
 	for (int i = 1; i < 9; i++)
 	{
 		if (readFile.gets(inBuf, 18) == NULL)throw runtime_error("读入文件失败");
@@ -50,8 +51,9 @@ bool solver::input(bool &withEndl)
 		{
 			tableBuf[i][j] = inBuf[2 * j] - '0';
 		}
+		if (readFile.gets(inBuf, 18) == NULL)throw runtime_error("读入文件失败");
 	}
-	if (readFile.gets(inBuf, 18) == NULL)
+	if (readFile.gets(inBuf, 18) != NULL)
 	{
 		withEndl = true;
 	}
@@ -79,6 +81,7 @@ bool solver::test(char i)
 		avalibleNumber.pop();
 		if (test(i + 1) == true)return true;
 	}
+	tableBuf[i / 9][i % 9] = 0;
 	return false;
 }
 
