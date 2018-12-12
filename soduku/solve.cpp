@@ -7,6 +7,11 @@ using namespace std;
 
 solver::solver(InFile &readFile_, OutFile &writeFile_) :readFile(readFile_), writeFile(writeFile_)
 {
+	for (int i = 0; i < 9; i++)
+	{
+		if (i != 8)lineBuf[2 * i + 1] = ' ';
+		else lineBuf[2 * i + 1] = '\0';
+	}
 	run();
 }
 
@@ -67,7 +72,7 @@ bool solver::input(bool &withEndl)
 bool solver::test(char i)
 {
 	if (i == 81)return true;
-	if (tableBuf[i / 9][i % 9] != 0)test(i + 1);
+	if (tableBuf[i / 9][i % 9] != 0)return test(i + 1);
 	char list[10];
 	searchAvalibleNumber(i / 9, i % 9, list);
 	queue<char> avalibleNumber;

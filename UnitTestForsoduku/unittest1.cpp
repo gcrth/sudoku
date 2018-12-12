@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
 #include "../soduku/generate.h"
-#include "../soduku/soduku.h"
+#include "../soduku/solve.h"
 #include "../soduku/IO.h"
 #include "../soduku/soduku.h"
 #include <assert.h>
@@ -213,21 +213,24 @@ namespace UnitTestForsoduku
 				list[i] = list[i] == 1 ? 1 : 0;
 			}
 		}
-		TEST_METHOD(testgeneratorsmall)
+		TEST_METHOD(testsolversmall)
 		{
 			// TODO: 在此输入测试代码
-			int numToGen(100);
+			int numToSol(4);
 			OutFile writeFile("soduku.txt");
 			writeFile.open();
-			generator(numToGen, writeFile, (char)3);
+			InFile testInput("sodukutestsmall.txt");
+			testInput.open();
+			solver(testInput, writeFile);
+			testInput.close();
 			writeFile.close();
 			InFile readFile("soduku.txt");
 			readFile.open();
-			for (int i = 0; i < numToGen; i++)
+			for (int i = 0; i < numToSol; i++)
 			{
 				bool withEndl;
 				input(withEndl, readFile);
-				if (i != numToGen - 1)
+				if (i != numToSol - 1)
 				{
 					if (withEndl == false)Assert::Fail();
 				}
@@ -235,25 +238,27 @@ namespace UnitTestForsoduku
 				{
 					if (withEndl == true)Assert::Fail();
 				}
-
-				if (testWholeTable() == false)Assert::Fail();
+				if (testWholeTable() == false)Assert::Fail();				
 			}
 		}
-		TEST_METHOD(testgeneratorbig)
+		TEST_METHOD(testsolverbig)
 		{
 			// TODO: 在此输入测试代码
-			int numToGen(1000000);
+			int numToSol(40);
 			OutFile writeFile("soduku.txt");
 			writeFile.open();
-			generator(numToGen, writeFile, (char)3);
+			InFile testInput("sodukutestbig.txt");
+			testInput.open();
+			solver(testInput, writeFile);
+			testInput.close();
 			writeFile.close();
 			InFile readFile("soduku.txt");
 			readFile.open();
-			for (int i = 0; i < numToGen; i++)
+			for (int i = 0; i < numToSol; i++)
 			{
 				bool withEndl;
 				input(withEndl, readFile);
-				if (i != numToGen - 1)
+				if (i != numToSol - 1)
 				{
 					if (withEndl == false)Assert::Fail();
 				}
@@ -261,10 +266,9 @@ namespace UnitTestForsoduku
 				{
 					if (withEndl == true)Assert::Fail();
 				}
-
 				if (testWholeTable() == false)Assert::Fail();
 			}
 		}
 	};
-
+	
 }
