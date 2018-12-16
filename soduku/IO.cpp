@@ -22,7 +22,7 @@ bool InFile::bind(const char desroute[])
 
 bool InFile::open()
 {
-	fp = fopen(route, "r+");
+	if (fp == NULL)fp = fopen(route, "r+");
 	return (fp != NULL);
 }
 
@@ -61,7 +61,7 @@ bool OutFile::bind(const char desroute[])
 
 bool OutFile::open()
 {
-	fp = fopen(route, "w+");
+	if (fp == NULL) fp = fopen(route, "w+");
 	return (fp != NULL);
 }
 

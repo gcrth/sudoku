@@ -2,7 +2,7 @@
 class InFile
 {
 private:
-	FILE *fp;
+	FILE *fp = NULL;
 	char route[1010];
 public:
 	InFile(void);
@@ -17,7 +17,7 @@ public:
 class OutFile
 {
 private:
-	FILE *fp;
+	FILE *fp = NULL;
 	char route[1010];
 public:
 	OutFile(void);
