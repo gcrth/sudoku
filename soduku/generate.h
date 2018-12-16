@@ -1,5 +1,6 @@
 #pragma once
 #include "IO.h"
+#include <string>
 
 class generator
 {
@@ -180,9 +181,11 @@ private:
 	char theFirstLine[9];
 	char tableBuf[9][9];
 	char lineBuf[18];
+	std::string outbuf;
 public:
 	generator(int numToGen_, OutFile &writeFile_, char firstElement = 3) ;
 	bool run();
 private:
 	bool output(bool withExtralEndl = true);
+	bool flush();
 };

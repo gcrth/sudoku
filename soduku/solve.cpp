@@ -23,6 +23,7 @@ bool solver::run()
 		test(0);
 		output(withEndl);
 	}
+	flush();
 	return true;
 }
 
@@ -120,7 +121,7 @@ void solver::searchAvalibleNumber(char x, char y, char list[])
 	}
 }
 
-bool solver::output(bool withExtralEndl )
+bool solver::output(bool withExtralEndl)
 {
 	for (int i = 0; i < 9; i++)
 	{
@@ -128,14 +129,19 @@ bool solver::output(bool withExtralEndl )
 		{
 			lineBuf[2 * j] = tableBuf[i][j] + '0';
 		}
-		if (writeFile.puts(lineBuf) == EOF)throw runtime_error("写入文件失败");
-
-		if (writeFile.puts("\n") == EOF)throw runtime_error("写入文件失败");
+		outbuf += lineBuf;
+		outbuf += '\n';
 	}
 	if (withExtralEndl)
 	{
-		if (writeFile.puts("\n") == EOF)throw runtime_error("写入文件失败");
+
+		outbuf += '\n';
 	}
 	return true;
 }
 
+bool solver::flush()
+{
+	if (writeFile.puts(outbuf.c_str()) == EOF)throw runtime_error("写入文件失败");
+	return 0;
+}

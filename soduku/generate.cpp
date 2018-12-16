@@ -5,6 +5,7 @@
 using namespace std;
 #include "IO.h"
 #include "generate.h"
+#include <string>
 
 generator::generator(int numToGen_, OutFile &writeFile_, char firstElement ) :writeFile(writeFile_)
 {
@@ -16,7 +17,8 @@ generator::generator(int numToGen_, OutFile &writeFile_, char firstElement ) :wr
 		if (i != 8)lineBuf[2 * i + 1] = ' ';
 		else lineBuf[2 * i + 1] = '\0';
 	}
-
+	outbuf.reserve(170*numToGen);
+	outbuf.clear();
 	run();
 }
 
@@ -53,25 +55,31 @@ bool generator::run()
 			output(false);
 		else output(true);
 	}
+	flush();
 	return true;
 }
 
-bool generator::output(bool withExtralEndl )
+bool generator::output(bool withExtralEndl)
 {
-	//TODO: 确认输出格式
 	for (int i = 0; i < 9; i++)
 	{
 		for (int j = 0; j < 9; j++)
 		{
 			lineBuf[2 * j] = tableBuf[i][j] + '0';
 		}
-		if (writeFile.puts(lineBuf) == EOF)throw runtime_error("写入文件失败");
-		
-		if (writeFile.puts("\n") == EOF)throw runtime_error("写入文件失败");
+		outbuf += lineBuf;
+		outbuf += '\n';
 	}
 	if (withExtralEndl)
 	{
-		if (writeFile.puts("\n") == EOF)throw runtime_error("写入文件失败");
+
+		outbuf += '\n';
 	}
 	return true;
+}
+
+bool generator::flush()
+{
+	if (writeFile.puts(outbuf.c_str()) == EOF)throw runtime_error("写入文件失败");
+	return 0;
 }
