@@ -22,7 +22,8 @@ bool InFile::bind(const char desroute[])
 
 bool InFile::open()
 {
-	if (fp == NULL)fp = fopen(route, "r+");
+	if (fp == NULL)
+		fp = fopen(route, "r+");
 	return (fp != NULL);
 }
 

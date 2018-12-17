@@ -12,6 +12,8 @@ solver::solver(InFile &readFile_, OutFile &writeFile_) :readFile(readFile_), wri
 		if (i != 8)lineBuf[2 * i + 1] = ' ';
 		else lineBuf[2 * i + 1] = '\0';
 	}
+	outbuf.reserve(1000000 * 170);
+	outbuf.clear();
 	run();
 }
 
@@ -73,7 +75,15 @@ bool solver::input(bool &withEndl)
 bool solver::test(char i)
 {
 	if (i == 81)return true;
-	if (tableBuf[i / 9][i % 9] != 0)return test(i + 1);
+	if (tableBuf[i / 9][i % 9] != 0)
+	{
+		int j;
+		for (j = i + 1; j < 81; j++)
+		{
+			if (tableBuf[j / 9][j % 9] == 0)break;
+		}
+		return test(j);
+	}
 	char list[10];
 	searchAvalibleNumber(i / 9, i % 9, list);
 	queue<char> avalibleNumber;

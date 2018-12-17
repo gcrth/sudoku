@@ -219,7 +219,8 @@ namespace UnitTestForsoduku
 			int numToSol(4);
 			OutFile writeFile("soduku.txt");
 			writeFile.open();
-			InFile testInput("sodukutestsmall.txt");
+			InFile testInput("sodukutestsamll.txt");
+			//                sodukutestsamll
 			testInput.open();
 			solver(testInput, writeFile);
 			testInput.close();
