@@ -3,7 +3,10 @@
 #include <string.h>
 #include "IO.h"
 
-InFile::InFile(void) {}
+InFile::InFile(void)
+{
+	strcpy(route, "");
+}
 
 InFile::InFile(const char desroute[])
 {
@@ -43,7 +46,10 @@ InFile::~InFile(void)
 	if (fp != NULL)fclose(fp);
 }
 
-OutFile::OutFile(void) {}
+OutFile::OutFile(void)
+{
+	strcpy(route, "");
+}
 
 OutFile::OutFile(const char desroute[])
 {

@@ -8,10 +8,9 @@ class solver
 private:
 	InFile &readFile;
 	OutFile &writeFile;
-	char tableBuf[9][9];
-	char tableMark[9][9];
-	char lineBuf[18];
-	char inBuf[50];
+	char tableBuf[9][9] = {0};
+	char lineBuf[18] = {0};
+	char inBuf[50] = {0};
 	std::string outbuf;
 public:
 	solver(InFile &readFile_, OutFile &writeFile_);

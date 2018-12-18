@@ -178,9 +178,9 @@ private:
 		{0,6,3,8,2,5,7,4,1},
 		{0,6,3,8,5,2,7,4,1},
 	};
-	char theFirstLine[9];
-	char tableBuf[9][9];
-	char lineBuf[18];
+	char theFirstLine[9] = {0};
+	char tableBuf[9][9] = {0};
+	char lineBuf[18] = {0};
 	std::string outbuf;
 public:
 	generator(int numToGen_, OutFile &writeFile_, char firstElement = 3) ;
