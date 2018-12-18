@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\gcrth\source\repos\soduku\soduku\</FILEPATH>
+      <FILENAME>solve.cpp</FILENAME>
+      <LINE>8</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'solver::tableBuf' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>solver::{ctor}</FUNCTION>
+    <DECORATED>??0solver@@QAE@AAVInFile@@AAVOutFile@@@Z</DECORATED>
+    <FUNCLINE>8</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\gcrth\source\repos\soduku\soduku\</FILEPATH>
+      <FILENAME>solve.cpp</FILENAME>
+      <LINE>8</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'solver::tableMark' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>solver::{ctor}</FUNCTION>
+    <DECORATED>??0solver@@QAE@AAVInFile@@AAVOutFile@@@Z</DECORATED>
+    <FUNCLINE>8</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\gcrth\source\repos\soduku\soduku\</FILEPATH>
+      <FILENAME>solve.cpp</FILENAME>
+      <LINE>8</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'solver::lineBuf' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>solver::{ctor}</FUNCTION>
+    <DECORATED>??0solver@@QAE@AAVInFile@@AAVOutFile@@@Z</DECORATED>
+    <FUNCLINE>8</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\gcrth\source\repos\soduku\soduku\</FILEPATH>
+      <FILENAME>solve.cpp</FILENAME>
+      <LINE>8</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'solver::inBuf' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>solver::{ctor}</FUNCTION>
+    <DECORATED>??0solver@@QAE@AAVInFile@@AAVOutFile@@@Z</DECORATED>
+    <FUNCLINE>8</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

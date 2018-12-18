@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\gcrth\source\repos\soduku\soduku\</FILEPATH>
+      <FILENAME>io.cpp</FILENAME>
+      <LINE>6</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'InFile::route' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>InFile::{ctor}</FUNCTION>
+    <DECORATED>??0InFile@@QAE@XZ</DECORATED>
+    <FUNCLINE>6</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\gcrth\source\repos\soduku\soduku\</FILEPATH>
+      <FILENAME>io.cpp</FILENAME>
+      <LINE>6</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'InFile::fp' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>InFile::{ctor}</FUNCTION>
+    <DECORATED>??0InFile@@QAE@XZ</DECORATED>
+    <FUNCLINE>6</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\gcrth\source\repos\soduku\soduku\</FILEPATH>
+      <FILENAME>io.cpp</FILENAME>
+      <LINE>8</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'InFile::fp' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>InFile::{ctor}</FUNCTION>
+    <DECORATED>??0InFile@@QAE@QBD@Z</DECORATED>
+    <FUNCLINE>8</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\gcrth\source\repos\soduku\soduku\</FILEPATH>
+      <FILENAME>io.cpp</FILENAME>
+      <LINE>39</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'OutFile::fp' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>OutFile::{ctor}</FUNCTION>
+    <DECORATED>??0OutFile@@QAE@XZ</DECORATED>
+    <FUNCLINE>39</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\gcrth\source\repos\soduku\soduku\</FILEPATH>
+      <FILENAME>io.cpp</FILENAME>
+      <LINE>39</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'OutFile::route' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>OutFile::{ctor}</FUNCTION>
+    <DECORATED>??0OutFile@@QAE@XZ</DECORATED>
+    <FUNCLINE>39</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\gcrth\source\repos\soduku\soduku\</FILEPATH>
+      <FILENAME>io.cpp</FILENAME>
+      <LINE>41</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'OutFile::fp' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>OutFile::{ctor}</FUNCTION>
+    <DECORATED>??0OutFile@@QAE@QBD@Z</DECORATED>
+    <FUNCLINE>41</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

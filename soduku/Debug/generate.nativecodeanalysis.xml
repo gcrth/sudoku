@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\gcrth\source\repos\soduku\soduku\</FILEPATH>
+      <FILENAME>generate.cpp</FILENAME>
+      <LINE>9</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'generator::tableBuf' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>generator::{ctor}</FUNCTION>
+    <DECORATED>??0generator@@QAE@HAAVOutFile@@D@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\gcrth\source\repos\soduku\soduku\</FILEPATH>
+      <FILENAME>generate.cpp</FILENAME>
+      <LINE>9</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'generator::lineBuf' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>generator::{ctor}</FUNCTION>
+    <DECORATED>??0generator@@QAE@HAAVOutFile@@D@Z</DECORATED>
+    <FUNCLINE>9</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>
